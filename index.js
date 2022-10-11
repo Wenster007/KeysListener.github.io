@@ -9,12 +9,13 @@ function play1() {
     audio1.play(); 
 }
 
+
 document.addEventListener("keydown", function (e) {
     console.log(e);
     
     let twoButtonKeys = e.key + e.location;//for keys that are more than one on the keyboard.
     const input = e.key.toLowerCase();//For converting all keys into lowercase
-    const arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    const arr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
     play1();
     if (e.key === "`") {
@@ -76,11 +77,15 @@ document.addEventListener("keydown", function (e) {
     }else if (e.code === "Meta"){
         document.getElementById("OS").style.backgroundColor = "green";
     } else if (e.key === "CapsLock"){
-        if (document.getElementById("CapsLock").style.backgroundColor === "green"){
-            document.getElementById("CapsLock").style.backgroundColor = "white";
-        } else {
+
+
+        if (e.getModifierState("CapsLock")) {//checks if capslock is on or not
             document.getElementById("CapsLock").style.backgroundColor = "green";
+        } 
+        else {
+            document.getElementById("CapsLock").style.backgroundColor = "white";
         }
+
     }  
     else if (arr.includes(e.key)) {
         document.querySelector(`#${input}`).style.backgroundColor = "green";
@@ -88,13 +93,14 @@ document.addEventListener("keydown", function (e) {
     else {
         document.querySelector(`#${e.key}`).style.backgroundColor = "green";
     }
+
 })
 
 document.addEventListener("keyup", function (e) {
 
     let twoButtonKeys = e.key + e.location;
     const input = e.key.toLowerCase();
-    const arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
+    const arr = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
 
     if (e.key === "`") {
@@ -155,10 +161,10 @@ document.addEventListener("keyup", function (e) {
         document.getElementById("Ctrl2").style.backgroundColor = "white";
     } else if (e.code === "Meta"){
         document.getElementById("OS").style.backgroundColor = "white";
-    } else if (e.code === "CapsLock"){
-        
-    }else if (arr.includes(e.key)) {
+    } else if (arr.includes(e.key)) {
         document.querySelector(`#${input}`).style.backgroundColor = "white";
+    } else if (e.key === "CapsLock"){
+        console.log("Do nothing");
     }
     else {
         document.querySelector(`#${e.key}`).style.backgroundColor = "white";

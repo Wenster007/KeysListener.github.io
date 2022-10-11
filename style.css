@@ -79,3 +79,6 @@ button {
   border-radius: 10px;
 }
 
+.on{
+  background-color: green;
+}
