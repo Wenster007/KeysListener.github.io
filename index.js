@@ -14,6 +14,7 @@ document.addEventListener("keydown", function (e) {
     
     let twoButtonKeys = e.key + e.location;//for keys that are more than one on the keyboard.
     const input = e.key.toLowerCase();//For converting all keys into lowercase
+    const arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
     play1();
     if (e.key === "`") {
@@ -80,9 +81,12 @@ document.addEventListener("keydown", function (e) {
         } else {
             document.getElementById("CapsLock").style.backgroundColor = "green";
         }
-    }   
-    else {
+    }  
+    else if (arr.includes(e.key)) {
         document.querySelector(`#${input}`).style.backgroundColor = "green";
+    }
+    else {
+        document.querySelector(`#${e.key}`).style.backgroundColor = "green";
     }
 })
 
@@ -90,6 +94,7 @@ document.addEventListener("keyup", function (e) {
 
     let twoButtonKeys = e.key + e.location;
     const input = e.key.toLowerCase();
+    const arr = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 
     if (e.key === "`") {
@@ -152,7 +157,10 @@ document.addEventListener("keyup", function (e) {
         document.getElementById("OS").style.backgroundColor = "white";
     } else if (e.code === "CapsLock"){
         
-    }else {
+    }else if (arr.includes(e.key)) {
         document.querySelector(`#${input}`).style.backgroundColor = "white";
+    }
+    else {
+        document.querySelector(`#${e.key}`).style.backgroundColor = "white";
     }
 })
