@@ -1,9 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500&display=swap");
+
 body {
   background-color: black;
 }
 
 .container {
-  margin: 150px 0 0 200px;
+  margin: 35px 0 0 300px;
   /* border: 2px solid red; */
 }
 
@@ -17,18 +19,18 @@ body {
 .three,
 .four,
 .five {
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
 }
 
 button {
   color: black;
-  width: 55px;
-  height: 55px;
+  width: 50px;
+  height: 50px;
   background-color: white;
   font-weight: 500;
   border: none;
   font-size: 15px;
-  margin-left: 5px;
+  margin-left: 3px;
   outline: none;
   font-family: Arial, Helvetica, sans-serif;
   border-radius: 20%;
@@ -45,7 +47,7 @@ button {
 }
 
 .tab {
-  width: 115px;
+  width: 106px;
   border-radius: 10px;
 }
 
@@ -55,17 +57,17 @@ button {
 }
 
 .cap {
-  width: 96px;
+  width: 125px;
   border-radius: 10px;
 }
 
 .enter-btn {
-  width: 109px;
+  width: 130px;
   border-radius: 10px;
 }
 
 .shift {
-  width: 135px;
+  width: 128px;
   border-radius: 10px;
 }
 
@@ -75,10 +77,29 @@ button {
 }
 
 .space {
-  width: 398px;
+  width: 326px;
   border-radius: 10px;
 }
 
-.on{
+/* .on{
   background-color: green;
+} */
+
+.heading {
+  margin: 45px 0 0 0;
+  text-align: center;
+  font-size: 3.2rem;
+  font-family: "Roboto Slab", serif;
+  color: yellow;
+}
+
+.inputBox {
+  font-size: 2rem;
+  width: 821px;
+  height: 56px;
+  margin: 29px 0 0 320px;
+  padding: 0 40px 0 40px;
+  background-color: yellow;
+  border-radius: 5px;
+  color: black;
 }
